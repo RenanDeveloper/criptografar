@@ -14,14 +14,21 @@
 <body>
     <div id="container">
         <main>
-            <textarea name="este" id="texto" cols="30" rows="10" placeholder="Digite seu texto"></textarea><br>
+            <div>
+                <textarea id="texto" cols="30" rows="10" placeholder="Digite seu texto"></textarea><br>
+            </div>
             <div class="elemento-center">
                 <button class="botoes" onclick="codificar()">Criptografar</button>
                 <button class="botoes" onclick="decodificar()">Descriptografar</button>
             </div>
         </main>
-        <aside id="resultado"> 
-            <button class="botoes base" onclick="copiar()">Copiar</button>
+        <aside>
+            <div>
+                <textarea id="resultado" cols="30" rows="10" disabled></textarea><br>
+            </div>
+            <div class="elemento-center base">
+                <button class="botoes" onclick="copiar()">Copiar</button>
+            </div>
         </aside>
         <footer>&copy; Todos os direitos reservados - Desenvolvido por Renan Tameirão</footer>
     </div>
