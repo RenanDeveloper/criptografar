@@ -44,8 +44,7 @@ aside{
 }
 
 .base{
-    background: #FFFFFF;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 1);
+    
 }
 .elemento-center{
     width: 60%;
@@ -53,11 +52,23 @@ aside{
 }
 .botoes{
     padding: 10px;
-    background: rgb(16,9,128);
-    background: linear-gradient(90deg, rgba(16,9,128,1) 0%, rgba(13,121,9,1) 35%, rgba(0,212,255,1) 100%);
-    border: none;
+    background-color: #FFFFFF;
+    border: 3px solid transparent;
+    border-image: linear-gradient(120deg, rgba(16,9,128,1), rgb(63, 218, 245));
+    border-image-slice: 1;
     font-weight: bolder;
-    color: #FFFFFF;
+    /* Primeiro passo: definir um degradê como fundo */
+    background-image: linear-gradient(120deg, rgba(16,9,128,1), rgb(63, 218, 245));
+  
+    /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+    background-clip: text;
+    -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+    /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+    -webkit-text-fill-color: transparent;
+
+    /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+    color: black;
 }
 footer{
     clear: both;
