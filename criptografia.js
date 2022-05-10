@@ -97,10 +97,18 @@ function copiar(){
     if(tamanho.length == 0){
         alert("Primeiramente, click em Criptografar ou Descriptografar.")
     }else{
-        textoCopiado.select();
-        textoCopiado.setSelectionRange(0, 99999)
-        document.execCommand("copy");
-        alert("O texto é: " + textoCopiado.value);
+        if (!navigator.clipboard){
+            alert("este navegador não tem suporte para efetuar a copia")
+        } else{
+            navigator.clipboard.writeText(tamanho).then(
+                function(){
+                    alert("Copiado com sucesso!"); // success 
+                })
+            .catch(
+                function() {
+                    alert("erro ao efetuar a cópia!"); // error
+            });
+        }    
     }
 }
 
