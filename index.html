@@ -13,20 +13,27 @@
 <body>
     <div id="container">
         <main>
-            <div>
-                <textarea id="texto" cols="30" rows="10" placeholder="Digite seu texto"></textarea><br>
-            </div>
-            <div class="elemento-center">
-                <button class="botoes" onclick="codificar()">Criptografar</button>
-                <button class="botoes" onclick="decodificar()">Descriptografar</button>
-            </div>
+            <section class="entrada">
+                <h2>Entre com um texto e escolha se quer Criptografar ou Descriptografar:</h2>
+                <div>
+                    <textarea class="texto" onkeyup="aguardando()" cols="30" rows="10" placeholder="Digite seu texto aqui..."></textarea><br>
+                </div>
+                <div class="centralizado">
+                    <button class="botoes" onclick="codificar()">Criptografar</button>
+                    <button class="botoes" onclick="decodificar()">Descriptografar</button>
+                </div>
+            </section>
+            <aside>
+                <h2>Resultado:</h2>
+                <div>
+                    <textarea class="resultado" cols="30" rows="10" disabled></textarea><br>
+                </div>
+                <div class="centralizado">
+                    <button class="botoes" onclick="copiar()">Copiar</button>
+                </div>
+            </aside>
         </main>
-        <aside>
-            <div class="elemento-center">
-                <textarea id="resultado" cols="30" rows="10" disabled></textarea><br>
-                <button class="botoes" onclick="copiar()">Copiar</button>
-            </div>
-        </aside>
+        
         <footer>&copy; Todos os direitos reservados - Desenvolvido por Renan Tameirão</footer>
     </div>
 </body>
